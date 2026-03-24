@@ -22,4 +22,10 @@ make-aur-package libpng12
 if [ "$ARCH" = "x86_64" ]; then
     VERSION=1.3custom
     echo "$VERSION" > ~/version
+
+    
     mkdir -p ./AppDir/bin
+    ln -sf /usr/lib/libGLEW.so /usr/lib/libGLEW.so.1.13
+    
+else
+fi
