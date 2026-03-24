@@ -20,8 +20,6 @@ make-aur-package libpng12
 
 # If the application needs to be manually built that has to be done down here
 if [ "$ARCH" = "x86_64" ]; then
-    VERSION=1.3custom
-    echo "$VERSION" > ~/version
     wget https://launchpad.net/~aapo-rantalainen/+archive/ubuntu/games/+files/maniadrive_1.3-+xenial_amd64.deb -O /tmp/app.deb
 
     mkdir -p ./AppDir/bin
@@ -29,6 +27,5 @@ if [ "$ARCH" = "x86_64" ]; then
     tar -xvf ./data.tar.xz -C ./AppDir/bin --strip-components=2 opt/maniadrive/*
     rm -f ./*.xz
     ln -sf /usr/lib/libGLEW.so /usr/lib/libGLEW.so.1.13
-    
 else
 fi
