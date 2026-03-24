@@ -7,8 +7,8 @@ ARCH=$(uname -m)
 echo "Installing package dependencies..."
 echo "---------------------------------------------------------------"
 pacman -Syu --noconfirm \
-    freealut
-    libxml2-legacy
+    freealut       \
+    libxml2-legacy \
     libcurl-gnutls
 
 echo "Installing debloated packages..."
