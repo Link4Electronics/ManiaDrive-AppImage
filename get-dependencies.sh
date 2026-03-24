@@ -8,8 +8,10 @@ echo "Installing package dependencies..."
 echo "---------------------------------------------------------------"
 pacman -Syu --noconfirm \
     freealut       \
+    glu            \
     libxml2-legacy \
-    libcurl-gnutls
+    libcurl-gnutls \
+    v4l-utils
 
 echo "Installing debloated packages..."
 echo "---------------------------------------------------------------"
