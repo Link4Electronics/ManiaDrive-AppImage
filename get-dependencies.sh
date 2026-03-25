@@ -42,5 +42,7 @@ else
     patch 
     patch 
     DISABLE_AUTORUN=1 ./odyncomp.sh mania_drive.c
-    #make -j$(nproc)
+    mv test ./AppDir/bin/mania.bin
+    DISABLE_AUTORUN=1 ./odyncomp.sh mania2.c
+
 fi
