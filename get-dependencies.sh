@@ -33,8 +33,8 @@ if [ "$ARCH" = "x86_64" ]; then
 else
     wget https://launchpad.net/~aapo-rantalainen/+archive/ubuntu/games/+sourcefiles/maniadrive/1.3-+xenial/maniadrive_1.3-+xenial.tar.gz
     mkdir mania_src
-    tar -xvf maniadrive_1.3-+xenial.tar.gz --strip-components=1 -C mania_src
-    cd mania_src
+    tar -xvf maniadrive_1.3-+xenial.tar.gz
+    cd maniadrive-1.3
     export LIBXML_CFLAGS="-I/usr/lib/libxml2-legacy/include/libxml2"
     export LIBXML_LIBS="-L/usr/lib/libxml2-legacy/lib -lxml2"
     export PKG_CONFIG_PATH="/usr/lib/libxml2-legacy/lib/pkgconfig"
