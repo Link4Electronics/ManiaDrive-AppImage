@@ -44,13 +44,12 @@ mkdir -p ./AppDir/bin
     sed -i 's/^CFLAGS = -Wall -Wno-unused-result/& -fcommon/' Makefile
     sed -i 's/^LDFLAGS=/& -L\/usr\/lib\/libxml2-legacy\/lib -lxml2/' Makefile
     DISABLE_AUTORUN=1 ./odyncomp.sh mania_drive.c
-    ls
-    mv -v test ./AppDir/bin/mania.bin
+    mv -v test ../AppDir/bin/mania.bin
     DISABLE_AUTORUN=1 ./odyncomp.sh mania2.c
-    mv -v test ./AppDir/bin/level_editor.bin
-    mv -v *.php mania_drive.story.beg mania_drive.story.pro ./AppDir/bin
+    mv -v test ../AppDir/bin/level_editor.bin
+    mv -v *.php mania_drive.story.beg mania_drive.story.pro ../AppDir/bin
     mv -v libraydium.so.0.0 /usr/lib/libraydium.so.0
     rm -f rayphp/README
     rm -f rayphp/r3s/README
-    mv -v rayphp ./AppDir/bin
+    mv -v rayphp ../AppDir/bin
 #fi
