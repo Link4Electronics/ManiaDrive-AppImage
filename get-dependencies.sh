@@ -41,9 +41,11 @@ else
     CFLAGS="-fcommon -std=gnu89" ./configure --disable-x
     patch -Ni kids_mode.patch
     patch -Ni editor_start.patch
-    LDFLAGS="-L/usr/lib/libxml2-legacy/lib -lxml2 -fcommon" DISABLE_AUTORUN=1 ./odyncomp.sh mania_drive.c
+    sed -i 's/^CFLAGS = -Wall -Wno-unused-result/& -fcommon/' Makefile
+    sed -i 's/^LDFLAGS=/& -L\/usr\/lib\/libxml2-legacy\/lib -lxml2/' Makefile
+    DISABLE_AUTORUN=1 ./odyncomp.sh mania_drive.c
     mv -v test ./AppDir/bin/mania.bin
-    LDFLAGS="-L/usr/lib/libxml2-legacy/lib -lxml2 -fcommon" DISABLE_AUTORUN=1 ./odyncomp.sh mania2.c
+    DISABLE_AUTORUN=1 ./odyncomp.sh mania2.c
     mv -v test ./AppDir/bin/level_editor.bin
     mv -v *.php mania_drive.story.beg mania_drive.story.pro ./AppDir/bin
     mv -v libraydium.so.0.0 /usr/lib/libraydium.so.0
