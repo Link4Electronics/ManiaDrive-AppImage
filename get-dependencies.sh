@@ -32,7 +32,7 @@ export LIBXML_CFLAGS="-I/usr/lib/libxml2-legacy/include/libxml2"
 export LIBXML_LIBS="-L/usr/lib/libxml2-legacy/lib -lxml2"
 export PKG_CONFIG_PATH="/usr/lib/libxml2-legacy/lib/pkgconfig"
 if [ "$ARCH" = "aarch64" ]; then
-    CFLAGS="-fcommon -std=gnu89" ./configure --disable-x --disable-x86-asm
+    CFLAGS="-fcommon -std=gnu89 -fPIC" ./configure --disable-x
 else
     CFLAGS="-fcommon -std=gnu89" ./configure --disable-x
 fi
