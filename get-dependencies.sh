@@ -19,11 +19,10 @@ echo "---------------------------------------------------------------"
 get-debloated-pkgs --add-common --prefer-nano
 
 # Comment this out if you need an AUR package
-make-aur-package libpng12
+#make-aur-package libpng12
 
 # If the application needs to be manually built that has to be done down here
 mkdir -p ./AppDir/bin
-#if [ "$ARCH" = "x86_64" ]; then
 wget https://launchpad.net/~aapo-rantalainen/+archive/ubuntu/games/+sourcefiles/maniadrive/1.3-+xenial/maniadrive_1.3-+xenial.tar.gz
 mkdir mania_src
 tar -xvf maniadrive_1.3-+xenial.tar.gz
